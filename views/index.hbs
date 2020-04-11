@@ -1,0 +1,15 @@
+<h1>{{title}} {{ id }}</h1>
+<p>Welcome to {{title}}</p>
+<form action="/person" method="post">
+<input name="id">
+<button type="submit">send</button>
+</form>
+<h1>success is : </h1>
+{{#if error}}
+    {{#each error as |ak|}}
+      <ul>
+            <li>{{ ak.msg }}</li>
+      </ul>
+    {{/each}}
+{{/if}}
+    
